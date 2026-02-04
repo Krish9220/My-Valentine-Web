@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f7c6d0, #fde2e7);
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+/* CARD */
+.card {
+  width: 640px;
+  min-height: 460px;
+  padding: 65px;
+  background: white;
+  border-radius: 36px;
+  text-align: center;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.25);
+  transition: 0.6s ease;
+}
+
+/* EMOJI */
+.emoji {
+  font-size: 95px;
+  margin-bottom: 25px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+/* QUESTION */
+h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 34px;
+  margin-bottom: 45px;
+  color: #ff4d6d;
+}
+
+/* BUTTONS */
+.buttons {
+  position: relative;
+  height: 120px;
+}
+
+button {
+  padding: 16px 40px;
+  font-size: 18px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* YES */
+#yes {
+  background: #ff4d6d;
+  color: white;
+  margin-right: 20px;
+  box-shadow: 0 14px 35px rgba(255,77,109,0.45);
+}
+
+/* NO */
+#no {
+  background: #e6e6e6;
+}
+
+/* HEARTBEAT */
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.25); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
+
+#yes:hover {
+  animation: heartbeat 0.6s infinite;
+}
+
+/* SHAKE (NO click) */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.3s;
+}
+
+/* SUCCESS */
+.success h1 {
+  font-size: 36px;
+  color: #ff4d6d;
+}
+
+.success p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.hidden {
+  display: none;
+}
+
+/* LOVE MODE */
+.card.love {
+  background: linear-gradient(135deg, #ffe1ea, #fff);
+  transform: scale(1.05);
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .card {
+    width: 90%;
+    padding: 40px 25px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+}
